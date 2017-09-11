@@ -229,7 +229,7 @@ func (a *annotator) printFunctionSource(fn *gocov.Function) error {
 			if statementFound && !hit {
 				hitmiss = missPrefix
 			}
-			fmt.Printf("%*d %s\t%s\n", linenoWidth, lineno, hitmiss, line)
+			fmt.Printf("%s:%*d %s\t%s\n", fn.File, linenoWidth, lineno, hitmiss, line)
 		}
 	}
 	fmt.Println()
